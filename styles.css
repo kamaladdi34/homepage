@@ -2,9 +2,13 @@ body {
   margin: 0px;
   position: relative;
   display: flex;
+  background-color: grey;
 }
 * {
   width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
 }
 .decoration {
   background-color: blue;
@@ -20,11 +24,71 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 500px;
+  flex-direction: column;
+  margin: 10px;
+  margin-top: 100px;
 }
 .about {
-  height: 30px;
   background-color: white;
-  max-width: 1200px;
-  height: calc(100% - 100px);
+  max-width: 1000px;
+  max-height: 300px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  padding-left: 0px;
+}
+.profile {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-color: red;
+  overflow: hidden;
+  margin-left: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.profile img {
+  display: block;
+  object-fit: cover;
+}
+.profile h2 {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .about {
+    max-height: fit-content;
+    display: block;
+    width: calc(100svw - 100px);
+    align-self: flex-end;
+    padding-left: 15px;
+  }
+  .profile {
+    float: left;
+    margin-top: 0;
+    width: 200px;
+    height: 200px;
+    transform-origin: bottom right;
+    transform: scale(calc(300 / calc(300 - calc(100 - 3))));
+  }
+}
+@media (max-width: 450px) {
+  main {
+    margin-top: 10px;
+  }
+  .about {
+    flex-direction: column;
+    width: 100%;
+  }
+  .profile {
+    margin: 0px;
+    margin-bottom: 10px;
+    transform-origin: center;
+    transform: scale(1);
+    width: 100%;
+    height: fit-content;
+  }
 }
