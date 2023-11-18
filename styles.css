@@ -58,6 +58,26 @@ main {
   color: white;
   text-align: center;
 }
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.links {
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+}
+.links > a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+}
 @media (max-width: 900px) {
   .about {
     max-height: fit-content;
@@ -73,6 +93,12 @@ main {
     height: 200px;
     transform-origin: bottom right;
     transform: scale(calc(300 / calc(300 - calc(100 - 3))));
+  }
+  .links {
+    display: none;
+  }
+  .information {
+    display: block;
   }
 }
 @media (max-width: 450px) {
