@@ -44,7 +44,6 @@ body > * {
   width: 400px;
   height: 400px;
   position: relative;
-  background-color: red;
   overflow: hidden;
   margin-left: 0;
   flex-shrink: 0;
@@ -70,16 +69,15 @@ body > * {
 .links {
   width: fit-content;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
-.about .links > a {
+.links > a {
   display: block;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
 }
 .portfolio {
   padding: 10px;
@@ -103,7 +101,7 @@ body > * {
   overflow: hidden;
 }
 .project > img {
-  background-color: greenyellow;
+  background-color: rgb(208, 208, 208);
   min-height: 60%;
 }
 .project .project-info {
@@ -131,10 +129,9 @@ body > * {
 .project .project-bar > .links > a {
   width: 40px;
   height: 40px;
-  background-color: red;
 }
 footer {
-  background-color: blueviolet;
+  background-color: rgb(29, 29, 29);
   max-width: 100svw;
   display: flex;
   justify-content: center;
@@ -145,17 +142,21 @@ footer {
   padding: 40px;
   max-width: 100vw;
   max-width: 1000px;
+  gap: 50px;
 }
 .container > img {
-  background-color: rebeccapurple;
+  background-color: rgb(206, 206, 206);
 }
 .container .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
 }
 .container > * {
   flex-grow: 1;
+}
+footer .links img {
+  filter: invert();
 }
 @media (max-width: 900px) {
   .about {
