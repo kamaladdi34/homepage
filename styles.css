@@ -5,7 +5,8 @@ body {
   flex-direction: column;
   background-color: rgb(246, 246, 246);
   align-items: center;
-  padding: 10px;
+  gap: 20px;
+  background-color: rgb(255, 255, 255);
 }
 body > * {
   max-width: 1000px;
@@ -19,13 +20,14 @@ body > * {
   margin: 0px;
 }
 .decoration {
-  background-color: blue;
+  background-color: rgb(232, 232, 232);
   height: 600px;
   position: absolute;
   z-index: -1;
   width: 100%;
   transform: perspective();
   transform: skewY(-10deg) translateY(-300px);
+  max-width: 100vw;
 }
 .about {
   background-color: white;
@@ -79,6 +81,9 @@ body > * {
   justify-content: center;
   background-color: red;
 }
+.portfolio {
+  padding: 10px;
+}
 .portfolio h2 {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -128,7 +133,30 @@ body > * {
   height: 40px;
   background-color: red;
 }
-
+footer {
+  background-color: blueviolet;
+  max-width: 100svw;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.container {
+  display: flex;
+  padding: 40px;
+  max-width: 100vw;
+  max-width: 1000px;
+}
+.container > img {
+  background-color: rebeccapurple;
+}
+.container .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container > * {
+  flex-grow: 1;
+}
 @media (max-width: 900px) {
   .about {
     max-height: fit-content;
@@ -136,6 +164,7 @@ body > * {
     width: calc(100svw - 100px);
     align-self: flex-end;
     padding-left: 15px;
+    margin-right: 10px;
   }
   .profile {
     float: left;
@@ -150,6 +179,9 @@ body > * {
   }
   .information {
     display: block;
+  }
+  footer .container {
+    flex-direction: column;
   }
 }
 @media (max-width: 450px) {
