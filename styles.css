@@ -99,6 +99,7 @@ body > * {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  border: 2px solid gray;
 }
 .project > img {
   background-color: rgb(208, 208, 208);
@@ -111,7 +112,11 @@ body > * {
 }
 .project .description {
   padding: 10px;
-  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  height: calc(4.2 * 16px);
 }
 .project .project-bar {
   display: flex;
@@ -144,8 +149,11 @@ footer {
   max-width: 1000px;
   gap: 50px;
 }
-.container > img {
-  background-color: rgb(206, 206, 206);
+.container > picture,
+.container img {
+  max-height: 450px;
+  max-width: 450px;
+  object-fit: contain;
 }
 .container .contact-info {
   display: flex;
