@@ -205,8 +205,8 @@ footer .email {
     display: block;
     width: calc(100svw - 100px);
     padding-left: 15px;
-    margin-top: 0px;
     margin-bottom: 0px;
+    margin-top: 80px;
     border-left: solid 2px black;
   }
   main {
@@ -242,6 +242,7 @@ footer .email {
   .about {
     width: 100svw;
     flex-direction: column;
+    margin-top: 0px;
   }
   .profile {
     margin: 0px;
