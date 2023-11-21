@@ -80,7 +80,8 @@ main {
   display: flex;
   gap: 20px;
 }
-.links > a {
+.links > a,
+.icon {
   display: block;
   width: 40px;
   height: 40px;
@@ -188,6 +189,15 @@ footer {
 }
 footer .links img {
   filter: invert();
+}
+.icon {
+  filter: invert();
+}
+footer .phone-number,
+footer .email {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 @media (max-width: 900px) {
   .about {
