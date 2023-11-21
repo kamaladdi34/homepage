@@ -88,6 +88,20 @@ main {
   align-items: center;
   justify-content: center;
 }
+.links > a:hover {
+  animation: 0.3s pop ease-in infinite;
+}
+@keyframes pop {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .portfolio {
   padding: 10px;
 }
